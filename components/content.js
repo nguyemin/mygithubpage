@@ -6,7 +6,7 @@ class Content extends React.Component {
     console.log(this.props.data);
 
     return (
-      <div className="tile">
+      <div>
         <Tiles data={this.props.data} />
       </div>
     );
