@@ -12,18 +12,8 @@
   justify-content: center;
   position: relative;
 }
-.tile,
-.img {
-  margin: 15px;
-  cursor: pointer;
-  overflow: hidden;
-  width: 18vw;
-  height: 18vw;
-}
-.img {
-  width: 100%;
-  transition: transform 500ms ease;
-}
-.img :hover {
-  transform: scale(1.1);
+.img,
+.images {
+  background: black;
+  object-fit: scale-down;
 }

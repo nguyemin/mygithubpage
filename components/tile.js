@@ -17,7 +17,6 @@ class Tile extends React.Component {
   _mouseEnter(e) {
     e.preventDefault();
     if (this.state.mouseOver === false) {
-      console.log(this.props.data.id);
       this.setState({
         mouseOver: true
       });
@@ -50,6 +49,7 @@ class Tile extends React.Component {
     let headerStyle = {};
     let zoom = {};
     // When tile clicked
+    console.log(this.state.open);
     if (this.state.open) {
       tileStyle = {
         width: "62vw",
@@ -72,13 +72,15 @@ class Tile extends React.Component {
 
     return (
       <div className="tile">
-        <img
+        <Image
           onMouseEnter={this._mouseEnter}
           onMouseLeave={this._mouseLeave}
           onClick={this._clickHandler}
+          layout="responsive"
           src={this.props.data.url}
           alt={this.props.data.id}
-          style={tileStyle}
+          width={300}
+          height={300}
         />
       </div>
     );

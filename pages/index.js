@@ -1,5 +1,7 @@
 import { request } from "../lib/datocms";
-import Content from "../components/content";
+import Head from "next/head";
+import { Box, Container } from "@chakra-ui/react";
+import Tiles from "../components/tiles";
 
 const HOMEPAGE_QUERY = `query HomePage {
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
@@ -29,12 +31,17 @@ export async function getStaticProps() {
   };
 }
 export default function Home({ data }) {
-  console.log(data);
   return (
-    <div className="body">
-      <Content data={data.drawings} />
-      <Content data={data.digitalArt} />
-      <Content data={data.photos} />
-    </div>
+    <Box overflow="hidden" bg="gray.900" minH="100vh" minW="100vw">
+      <Head>
+        <title> Minhception</title>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+      </Head>
+      <Container minW="100vw">
+        <Tiles data={data.drawings} />
+        <Tiles data={data.digitalArt} />
+        <Tiles data={data.photos} />
+      </Container>
+    </Box>
   );
 }
