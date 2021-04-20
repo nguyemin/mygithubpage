@@ -1,7 +1,7 @@
 import { request } from "../lib/datocms";
 import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
-import Tiles from "../components/tiles";
+import Content from "../components/content";
 
 const HOMEPAGE_QUERY = `query HomePage {
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
@@ -38,9 +38,9 @@ export default function Home({ data }) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Container minW="100vw">
-        <Tiles data={data.drawings} />
-        <Tiles data={data.digitalArt} />
-        <Tiles data={data.photos} />
+        <Content data={data.drawings} />
+        <Content data={data.digitalArt} />
+        <Content data={data.photos} />
       </Container>
     </Box>
   );
