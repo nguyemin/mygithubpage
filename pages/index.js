@@ -2,8 +2,13 @@ import { request } from "../lib/datocms";
 import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import Content from "../components/content";
+import About from "../components/about";
 
 const HOMEPAGE_QUERY = `query HomePage {
+  back: allUploads(filter: {tags: {eq: "back"}}) {
+    id
+    url
+  }
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
     id
     url
@@ -37,6 +42,7 @@ export default function Home({ data }) {
         <title> Minhception</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <About background={data.back} profile={data.profile} />
       <Container minW="100vw">
         <Content data={data.drawings} />
         <Content data={data.digitalArt} />
