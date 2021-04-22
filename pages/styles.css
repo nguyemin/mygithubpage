@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "BLANKA";
+  src: url("../public/fonts/Blanka-Regular.otf");
+}
+@font-face {
+  font-family: "ALLEGIANT";
+  src: url("../public/fonts/Allegiant-Regular.otf");
+}
+@font-face {
+  font-family: "SourceCodeM";
+  src: url("../public/fonts/SourceCodePro-Medium.ttf");
+}
+@font-face {
+  font-family: "SourceCodeB";
+  src: url("../public/fonts/SourceCodePro-SemiBold.ttf");
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
 .body {
   width: 100%;
   font-family: "PT Sans";
@@ -6,10 +28,14 @@
 }
 .background {
   background-image: url("../public/background.jpeg");
-  opacity: 0.2;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 0.1;
+  position: absolute;
+}
+.entry {
+  background-color: None;
 }
 .tiles {
   padding: 6vh 16vw;
@@ -23,4 +49,53 @@
 .images {
   background: black;
   object-fit: scale-down;
+}
+.profile {
+  background: black;
+  object-fit: cover;
+}
+.aboutText {
+  font-family: "SourceCodeB";
+  color: #fff;
+}
+.title {
+  font-family: "BLANKA";
+  color: #fff;
+  letter-spacing: 0.5rem;
+}
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 10em) {
+  .aboutText {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 30em) {
+  .aboutText {
+    font-size: 2.5rem;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .aboutText {
+    font-size: 3rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 62em) {
+  .aboutText {
+    font-size: 3rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
 }
