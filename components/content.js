@@ -5,7 +5,8 @@ import Image from "next/image";
 class Content extends React.Component {
   render() {
     return (
-      <Container minW="100vw" mt="10em">
+      <Container minW="100vw" mt="5em">
+        <Text className="title">{this.props.title}</Text>
         <Wrap px="1rem" spacing={4} justify="center">
           {this.props.data.map(pic => (
             <WrapItem

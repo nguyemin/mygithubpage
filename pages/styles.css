@@ -55,12 +55,16 @@
   object-fit: cover;
 }
 .aboutText {
+  text-transform: uppercase;
+  text-align: justify;
+  line-height: 1.2;
   font-family: "SourceCodeB";
   color: #fff;
 }
 .title {
   font-family: "BLANKA";
   color: #fff;
+  line-height: 1.5;
   letter-spacing: 0.5rem;
 }
 .aboutSection {
