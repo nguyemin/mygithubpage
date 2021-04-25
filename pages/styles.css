@@ -14,13 +14,37 @@
   font-family: "SourceCodeB";
   src: url("../public/fonts/SourceCodePro-SemiBold.ttf");
 }
+a {
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font-family: "SourceCodeM";
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+}
 .about {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   z-index: 3;
-  width: 100vw;
+  width: 100%;
   margin-top: 50px;
 }
 .aboutSection {
@@ -46,16 +70,12 @@
   background-position: center;
   opacity: 0.1;
   position: absolute;
+  top: 0;
 }
-.body {
-  width: 100%;
-  font-family: "PT Sans";
-  font-size: 18px;
-  background-color: #111111;
-}
+
 .contentContainer {
   margin: 0;
-  padding: 0;
+  padding-top: 2rem;
 }
 .contentTitle {
   font-family: "BLANKA";
@@ -86,10 +106,17 @@
   justify-content: center;
 }
 .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   height: 50px;
   z-index: 99;
+  opacity: 0.8;
+}
+.navigationIcon {
+  opacity: 0.8;
 }
 .profile {
   background: black;
@@ -97,7 +124,7 @@
 }
 .title {
   text-align: center;
-  min-width: 100vw;
+  min-width: 100%;
   font-family: "BLANKA";
   color: #fff;
   line-height: 2;
@@ -134,6 +161,16 @@
   }
 }
 @media screen and (min-width: 64em) {
+  a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: "SourceCodeM";
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+
   .about {
     flex-direction: row;
     justify-content: center;

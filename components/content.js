@@ -1,11 +1,11 @@
 import React from "react";
-import { Wrap, WrapItem, Container, Text, Box } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
 class Content extends React.Component {
   render() {
     return (
-      <Box className="contentContainer">
+      <Box className="contentContainer" id={this.props.anchor}>
         <Text className="contentTitle">{this.props.title}</Text>
         <Box className="galleryContainer">
           {this.props.data.map(pic => (

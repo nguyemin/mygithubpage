@@ -4,6 +4,7 @@ import { Box, Container } from "@chakra-ui/react";
 import Content from "../components/content";
 import About from "../components/about";
 import Navigation from "../components/navigation";
+import dynamic from "next/dynamic";
 
 const HOMEPAGE_QUERY = `query HomePage {
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
@@ -24,6 +25,7 @@ const HOMEPAGE_QUERY = `query HomePage {
   }
 }
 `;
+
 export async function getStaticProps() {
   const data = await request({
     query: HOMEPAGE_QUERY
@@ -39,12 +41,16 @@ export default function Home({ data }) {
         <title> Minhception</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <Navigation></Navigation>
+      <Navigation />
       <About profile={data.profile} />
       <Box>
-        <Content data={data.drawings} title="drawings" />
-        <Content data={data.digitalArt} title="digital art" />
-        <Content data={data.photos} title="photography" />
+        <Content data={data.drawings} title="drawings" anchor="drawing" />
+        <Content
+          data={data.digitalArt}
+          title="digital art"
+          anchor="digitalart"
+        />
+        <Content data={data.photos} title="photography" anchor="photography" />
       </Box>
     </Box>
   );
