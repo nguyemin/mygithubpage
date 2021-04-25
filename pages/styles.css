@@ -16,16 +16,29 @@
 }
 .about {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   z-index: 3;
+  width: 100vw;
+  margin-top: 50px;
 }
-.body {
-  width: 100%;
-  font-family: "PT Sans";
-  font-size: 18px;
-  background-color: #111111;
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
+.aboutText {
+  text-align: center;
+  min-width: 300px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-family: "SourceCodeM";
+  letter-spacing: 1rem;
+  color: #fff;
+  font-size: 2.7rem;
+}
+
 .background {
   background-image: url("../public/background.jpeg");
   background-repeat: no-repeat;
@@ -34,8 +47,62 @@
   opacity: 0.1;
   position: absolute;
 }
-.entry {
-  background-color: None;
+.body {
+  width: 100%;
+  font-family: "PT Sans";
+  font-size: 18px;
+  background-color: #111111;
+}
+.contentContainer {
+  margin: 0;
+  padding: 0;
+}
+.contentTitle {
+  font-family: "BLANKA";
+  line-height: 1.2;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.img,
+.images {
+  background: black;
+  object-fit: scale-down;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.galleryContainer {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  z-index: 99;
+}
+.profile {
+  background: black;
+  object-fit: cover;
+}
+.title {
+  text-align: center;
+  min-width: 100vw;
+  font-family: "BLANKA";
+  color: #fff;
+  line-height: 2;
+  letter-spacing: 0.5rem;
+  font-size: 3.5rem;
 }
 .tiles {
   padding: 6vh 16vw;
@@ -45,61 +112,67 @@
   justify-content: center;
   position: relative;
 }
-.img,
-.images {
-  background: black;
-  object-fit: scale-down;
-}
-.profile {
-  background: black;
-  object-fit: cover;
-}
-.aboutText {
-  text-transform: uppercase;
-  text-align: justify;
-  line-height: 1.2;
-  font-family: "SourceCodeB";
-  color: #fff;
-}
-.title {
-  font-family: "BLANKA";
-  color: #fff;
-  line-height: 1.5;
-  letter-spacing: 0.5rem;
-}
-.aboutSection {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 10em) {
-  .aboutText {
-    font-size: 2rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 30em) {
-  .aboutText {
-    font-size: 2.5rem;
-  }
-  .title {
-    font-size: 3.5rem;
-  }
+
+@media screen and (min-width: 23em) {
 }
 @media screen and (min-width: 48em) {
+  .about {
+    margin-top: 5rem;
+  }
+  .aboutSection {
+    margin-top: 2rem;
+  }
   .aboutText {
-    font-size: 3rem;
+    min-width: 400px;
+  }
+  .imageContainer {
+    margin: 10px;
+    width: calc(50vw - 50px);
   }
   .title {
+    min-width: 400px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .about {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .aboutSection {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+  .imageContainer {
+    margin: 1vw;
+    width: calc(32vw - 2vw);
+  }
+  .profile {
+    margin-right: 2rem;
+  }
+  .title {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 80em) {
+  .contentTitle {
+    text-align: left;
+    padding-left: 3.5vw;
     font-size: 4rem;
   }
 }
-@media screen and (min-width: 62em) {
-  .aboutText {
-    font-size: 3rem;
+@media screen and (min-width: 90em) {
+  .imageContainer {
+    margin: 1vw;
+    width: calc(23vw - 1vw);
   }
-  .title {
-    font-size: 4rem;
+}
+@media screen and (min-width: 120em) {
+}
+
+@media screen and (min-width: 140em) {
+  .imageContainer {
+    margin: 1vw;
+    width: calc(18vw - 1vw);
   }
 }

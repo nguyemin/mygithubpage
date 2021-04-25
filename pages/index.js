@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import Content from "../components/content";
 import About from "../components/about";
+import Navigation from "../components/navigation";
 
 const HOMEPAGE_QUERY = `query HomePage {
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
@@ -33,17 +34,18 @@ export async function getStaticProps() {
 }
 export default function Home({ data }) {
   return (
-    <Box overflow="hidden" bg="gray.900" minH="100vh" minW="99vw">
+    <Box bg="gray.900" minH="100vh" minW="100vw" overflowX="hidden">
       <Head>
         <title> Minhception</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <Navigation></Navigation>
       <About profile={data.profile} />
-      <Container minW="100vw">
+      <Box>
         <Content data={data.drawings} title="drawings" />
         <Content data={data.digitalArt} title="digital art" />
         <Content data={data.photos} title="photography" />
-      </Container>
+      </Box>
     </Box>
   );
 }
