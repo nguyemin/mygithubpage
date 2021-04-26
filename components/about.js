@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Wrap, WrapItem, Text, Center } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 class About extends React.Component {
@@ -29,6 +29,7 @@ class About extends React.Component {
             <Text className="aboutText">in meinen</Text>
             <Text className="aboutText">Alter Ego</Text>
           </Box>
+          <Box className="icon-scroll"> </Box>
         </Box>
       </Box>
     );
