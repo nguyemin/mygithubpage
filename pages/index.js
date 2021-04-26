@@ -35,7 +35,7 @@ export async function getStaticProps() {
 }
 export default function Home({ data }) {
   return (
-    <Box bg="gray.900" minH="100vh" minW="100vw" overflowX="hidden">
+    <Box bg="gray.900" minH="100vh" min="100%" overflowX="hidden">
       <Head>
         <title> Minhception</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}

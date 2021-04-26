@@ -5,7 +5,7 @@ import Link from "next/link";
 class Navigation extends React.Component {
   render() {
     return (
-      <Box className="navigation" minW="100%" bg="gray.900">
+      <Box className="navigation" w="100%" bg="gray.900">
         <ul>
           <li>
             <Link href="#drawing">
