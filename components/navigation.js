@@ -10,7 +10,7 @@ class Navigation extends React.Component {
           <li>
             <Link href="#drawing">
               <Image
-                src="/../public/assets/drawing.png"
+                src="/assets/drawing.png"
                 height={40}
                 width={40}
                 className="navigationIcon"
@@ -20,7 +20,7 @@ class Navigation extends React.Component {
           <li>
             <Link href="#digitalart">
               <Image
-                src="/../public/assets/digital.png"
+                src="/assets/digital.png"
                 height={40}
                 width={40}
                 className="navigationIcon"
@@ -31,7 +31,7 @@ class Navigation extends React.Component {
           <li>
             <Link href="#photography">
               <Image
-                src="/../public/assets/photography.png"
+                src="/assets/photography.png"
                 height={40}
                 width={40}
                 className="navigationIcon"

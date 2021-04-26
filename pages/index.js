@@ -1,10 +1,9 @@
 import { request } from "../lib/datocms";
 import Head from "next/head";
-import { Box, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Content from "../components/content";
 import About from "../components/about";
 import Navigation from "../components/navigation";
-import dynamic from "next/dynamic";
 
 const HOMEPAGE_QUERY = `query HomePage {
   profile: allUploads(filter: {tags: {eq: "profile"}}) {
