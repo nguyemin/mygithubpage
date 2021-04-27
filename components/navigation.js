@@ -5,8 +5,18 @@ import Link from "next/link";
 class Navigation extends React.Component {
   render() {
     return (
-      <Box className="navigation" w="100%" bg="gray.900">
+      <Box className="navigation" w="100%">
         <ul>
+          <li>
+            <Link href="#home">
+              <Image
+                src="/assets/home.png"
+                height={40}
+                width={40}
+                className="navigationIcon"
+              />
+            </Link>
+          </li>
           <li>
             <Link href="#drawing">
               <Image
